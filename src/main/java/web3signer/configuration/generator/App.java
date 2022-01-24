@@ -22,12 +22,12 @@ import picocli.CommandLine.ParameterException;
 import picocli.CommandLine.Spec;
 
 @Command(
-    name = "web3signer-configuration-generator",
+    name = "signer-configuration-generator",
     subcommands = {HashicorpSubcommand.class, RawSubcommand.class, Eth1Subcommand.class},
     mixinStandardHelpOptions = true,
-    version = "1.0",
+    version = "1.1",
     description =
-        "Generate random BLS Keys and web3signer configuration files (and load them in vault)")
+        "Generate random SECP256K1/BLS Keys and configuration files")
 public class App implements Callable<Integer> {
   private static final Logger LOG = LoggerFactory.getLogger(App.class);
   @Spec CommandSpec spec;

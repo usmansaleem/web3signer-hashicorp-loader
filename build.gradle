@@ -46,6 +46,12 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
 application {
     // Define the main class for the application.
     mainClass = 'web3signer.configuration.generator.App'
